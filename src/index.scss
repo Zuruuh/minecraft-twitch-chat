@@ -1,0 +1,62 @@
+* {
+  font-family: Monocraft;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  background-image: url('/assets/images/wallpaper.jpg');
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+#chat {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.75);
+  justify-content: flex-end;
+  padding: 1rem;
+  min-height: 35%;
+}
+
+#chatline {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 0 0 0.5rem 0.5rem;
+
+  span {
+    color: white;
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+}
+
+.message {
+  &.info {
+    color: #f5f68f;
+  }
+
+  .author {
+    color: white;
+
+    .mod {
+      color: green;
+    }
+
+    &::before {
+      content: '<';
+      color: white;
+    }
+    &::after {
+      content: '>';
+      color: white;
+    }
+  }
+
+  & .content {
+    margin-left: 0.5rem;
+    color: white;
+  }
+}
